@@ -27,6 +27,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      * Пытался сделать всё по красоте,
      * Clean Architecture, MVVM, ViewBinding, Hilt, Coroutines, Retrofit, Google Maps.
      * Также хотел использовать Android Navigation Component, но передумал.
+     *
+     * Также хотел написать тестов, но, к сожалению, не успел.
      */
 
     private lateinit var map: GoogleMap
