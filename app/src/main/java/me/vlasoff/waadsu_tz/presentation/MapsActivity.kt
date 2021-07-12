@@ -23,6 +23,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      * Не судите строго, первый опыт работы с картами.
      * Получилось бы лучше,если бы не траблы с Api-ключом.
      * Но, что случилось, то случилось. Мой косяк.
+     *
+     * Пытался сделать всё по красоте,
+     * Clean Architecture, MVVM, ViewBinding, Hilt, Coroutines, Retrofit, Google Maps.
+     * Также хотел использовать Android Navigation Component, но передумал.
      */
 
     private lateinit var map: GoogleMap
