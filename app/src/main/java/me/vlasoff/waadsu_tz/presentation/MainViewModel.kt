@@ -12,6 +12,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val getGeoDataUseCase: GetGeoDataUseCase
 ): Contract.IMainViewModel, ViewModel() {
+    // получаем данные и сразу оборачиваем их в лайвдату
     override fun getData() = liveData(Dispatchers.IO) {
         try {
             emit(Resource.success(data = getGeoDataUseCase.execute()))

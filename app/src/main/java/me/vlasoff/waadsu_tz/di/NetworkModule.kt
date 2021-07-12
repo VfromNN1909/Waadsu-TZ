@@ -13,6 +13,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+
+// модули приложения
+// тут мы провайлим все важные компоненты
+
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {

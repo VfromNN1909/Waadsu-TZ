@@ -3,6 +3,8 @@ package me.vlasoff.waadsu_tz.domain.entities.map
 import android.location.Location
 import com.google.android.gms.maps.model.LatLng
 
+
+// тестовые данные
 data class Routes(
     val waypoints: List<LatLng>,
 ) {

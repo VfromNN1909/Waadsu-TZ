@@ -5,22 +5,10 @@ import me.vlasoff.waadsu_tz.data.network.ApiService
 import me.vlasoff.waadsu_tz.domain.entities.retrofit.GeoData
 import javax.inject.Inject
 
+// репозиторий
 class GeoRepository @Inject constructor(
     private val service: ApiService
 ): IRepository.IGeoRepository {
-    override suspend fun getData() = parseCoordinates(service.getPoints())
+    override suspend fun getData() = service.getPoints()
 
-    private fun parseCoordinates(data: GeoData): List<LatLng> {
-        val allCoords = mutableListOf<LatLng>()
-        data.features.forEach { feature ->
-            feature.geometry.coordinates.forEach { polygon ->
-                polygon.forEach { line ->
-                    line.forEach {
-                        allCoords.add(LatLng(it[0], it[1]))
-                    }
-                }
-            }
-        }
-        return allCoords
-    }
 }

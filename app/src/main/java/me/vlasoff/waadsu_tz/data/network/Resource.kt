@@ -1,5 +1,6 @@
 package me.vlasoff.waadsu_tz.data.network
 
+// вспомогательный класс для ретрофита
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
     companion object {
         fun <T> success(data: T): Resource<T> =
